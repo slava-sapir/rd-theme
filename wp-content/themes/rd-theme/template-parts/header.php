@@ -1,5 +1,5 @@
-<header class="navbar bg-base-100">
-    <div class="navbar-start">
+<header class="navbar bg-white">
+    <div class="navbar-start container bg-blue">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                 <svg
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="navbar-center">
-        <a class="btn btn-ghost text-xl"><?php bloginfo('name'); ?></a>
+        <a class="btn btn-ghost text-xl bg-off-white hover:bg-blue"><?php bloginfo('name'); ?></a>
     </div>
     <div class="navbar-end">
         <button class="btn btn-ghost btn-circle">
