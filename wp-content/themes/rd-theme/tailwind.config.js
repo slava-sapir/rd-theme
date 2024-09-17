@@ -6,18 +6,20 @@ import daisyui from "daisyui";
 
 module.exports = {
     content: [
-        './*.php',
         './template-parts/*.php',
+        './blocks/**/*.php',
         './resources/**/*.js',
+        './index.php',
     ],
     theme: {
+        // Merge all screens into one definition
         screens: {
             sm:   '576px',
             md:   '768px',
             lg:   '992px',
             xl:   '1200px',
-            xxl:  '1400px',
-            xxxl: '1520px',
+            xxl:  '1400px', // Added to the main screen config
+            xxxl: '1520px', // Added to the main screen config
         },
         colors: {
             'off-black':   '#232323',
@@ -35,14 +37,15 @@ module.exports = {
         container: {
             center: true,
             padding: '1rem',
-            screens: {
-                sm:   '540px',
-                md:   '720px',
-                lg:   '960px',
-                xl:   '1140px',
-                xxl:  '1320px',
-                xxxl: '1440px',
-            }
+            // You can now inherit from the main screens definition without redefining
+            // screens: {
+            //     sm:   '540px',
+            //     md:   '720px',
+            //     lg:   '960px',
+            //     xl:   '1140px',
+            //     xxl:  '1320px', // Same as before
+            //     xxxl: '1440px', // Same as before
+            // }
         },
         extend: {
             fontSize: {
@@ -68,10 +71,34 @@ module.exports = {
                 p: { fontSize: theme('fontSize.p') },
             });
         },
+        function ({ addComponents }) {
+            addComponents({
+                '.container': {
+                    maxWidth: '100%',
+                    '@screen sm': {
+                        maxWidth: '540px',
+                    },
+                    '@screen md': {
+                        maxWidth: '720px',
+                    },
+                    '@screen lg': {
+                        maxWidth: '960px',
+                    },
+                    '@screen xl': {
+                        maxWidth: '1140px',
+                    },
+                    '@screen xxl': {
+                        maxWidth: '1320px',
+                    },
+                    '@screen xxxl': {
+                        maxWidth: '1440px',
+                    },
+                }
+            })
+        },
         container_queries,
         forms,
         typography,
         daisyui,
     ],
 }
-

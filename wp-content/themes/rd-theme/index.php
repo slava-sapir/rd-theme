@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 
 <?php get_template_part('template-parts/header'); ?>
-    <div class="container mx-auto">
+    <div class="container">
         <main class="content">
-            <?php get_template_part('template-parts/slider'); ?>
             <?php
             if (have_posts()) :
                 while (have_posts()) : the_post();
