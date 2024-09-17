@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation";
+@import "../../node_modules/swiper/modules/effect-fade";
+
+@layer components {
+    .btn-orange,
+    .btn-blue,
+    .btn-grey,
+    .btn-green {
+        @apply p-2.5 rounded-full;
+    }
+}

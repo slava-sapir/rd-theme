@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "esModuleInterop": true,
+        "target": "ES2022",
+        "module": "ES2022",
+        "outDir": "public/js",
+        "rootDir": "resources/js",
+        "moduleResolution": "node"
+    }
+}
