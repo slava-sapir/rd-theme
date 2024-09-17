@@ -1,0 +1,24 @@
+{
+    "name": "rd-theme",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "npx mix --production",
+        "dev": "npx mix",
+        "watch": "npx mix watch"
+    },
+    "devDependencies": {
+        "@tailwindcss/container-queries": "^0.1.1",
+        "@tailwindcss/forms": "^0.5.9",
+        "@tailwindcss/typography": "^0.5.15",
+        "daisyui": "^4.12.10",
+        "laravel-mix": "^6.0.49",
+        "mix-tailwindcss": "^1.3.0",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.78.0",
+        "sass-loader": "^16.0.1",
+        "swiper": "^11.1.12",
+        "tailwindcss": "^3.4.10",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.6.2"
+    }
+}

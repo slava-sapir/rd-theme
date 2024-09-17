@@ -1,0 +1,14 @@
+{
+    "name": "reddingdesigns/rd-theme",
+    "autoload": {
+        "psr-4": {
+            "RdTheme\\": "classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anthony Trivisano",
+            "email": "anthony@reddingdesigns.com"
+        }
+    ]
+}
