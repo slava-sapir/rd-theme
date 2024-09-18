@@ -4,4 +4,4 @@
 !.gitignore
 !composer.json
 !README.md
-!old-wp-config.php
+!wp-config.php
