@@ -100,3 +100,8 @@ $faq_cpt_category->labels(
     taxonomy: 'faq-category',
     slug: 'faq-category'
 );
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+    acf_add_options_sub_page('Header');
+}

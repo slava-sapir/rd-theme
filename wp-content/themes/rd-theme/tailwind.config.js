@@ -23,6 +23,7 @@ module.exports = {
         },
         colors: {
             'off-black':   '#232323',
+            'white':       '#FFFFFF',
             'off-white':   '#F1F1F1',
             'grey':        '#747479',
             'button-grey': '#565656',
