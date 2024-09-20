@@ -166,7 +166,6 @@ define('AUTH_SALT', config('wordpress.salt.key'));
 define('SECURE_AUTH_SALT', config('wordpress.salt.secret'));
 define('LOGGED_IN_SALT', config('wordpress.salt.logged_in'));
 define('NONCE_SALT', config('wordpress.salt.nonce'));
-define( 'WP_CACHE', true ); // Added by Hummingbird
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
