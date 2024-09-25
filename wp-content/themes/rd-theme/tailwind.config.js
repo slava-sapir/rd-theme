@@ -22,6 +22,7 @@ module.exports = {
             xxxl: '1520px', // Added to the main screen config
         },
         colors: {
+            'white':       '#FFFFFF',
             'off-black':   '#232323',
             'off-white':   '#F1F1F1',
             'grey':        '#747479',
