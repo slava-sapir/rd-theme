@@ -94,6 +94,35 @@ module.exports = {
                     '@screen xxxl': {
                         maxWidth: '1440px',
                     },
+                },
+                '.small-container': {
+                    maxWidth: '100%',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    paddingLeft: '1rem',
+                    paddingRight: '1rem',
+                    '@screen sm': {
+                        maxWidth: '540px',
+                    },
+                    '@screen md': {
+                        maxWidth: '720px',
+                    },
+                    '@screen lg': {
+                        maxWidth: '960px',
+                    }
+                },
+                '.narrow-container': {
+                    maxWidth: '100%',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    paddingLeft: '1rem',
+                    paddingRight: '1rem',
+                    '@screen sm': {
+                        maxWidth: '540px',
+                    },
+                    '@screen md': {
+                        maxWidth: '720px',
+                    },
                 }
             })
         },
