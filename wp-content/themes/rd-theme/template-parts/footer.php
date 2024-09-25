@@ -3,7 +3,9 @@ $secondary_logo = get_field('secondary_logo', 'options');
 $address = get_field('address', 'options');
 $phone = get_field('phone', 'options');
 $email = get_field('email', 'options'); 
-$pages = get_field('pages', 'options'); ?>
+$pages = get_field('pages', 'options');
+$copyright = get_field('copyright', 'options');
+$certification = get_field('certification', 'options');?>
 <footer class="bg-off-black py-12">
     <section class="container grid grid-cols-4">
         <figure class="col-span-4 lg:col-span-1">
@@ -27,8 +29,28 @@ $pages = get_field('pages', 'options'); ?>
                 </ul>
             <?php endif; ?>
         </article>
-        <section class="col-span-4 border-solid border-t border-off-white mt-3 md:mt-5 pt-3">
-            trait_exists
+        <section class="col-span-4 grid grid-cols-6 border-solid border-t border-off-white mt-3 md:mt-5 pt-2">
+            <?php if ($copyright): ?>
+                <article class="col-span-5 lg:col-span-2">
+                    <span class="text-sm font-light text-off-white"><?= $copyright ?></span>
+                </article>
+            <?php endif; ?>
+            <?php if ($certification): ?>
+                <article class="col-span-5 lg:col-span-2 text-left lg:text-right">
+                    <span class="text-sm font-light text-off-white"><?= $certification ?></span>
+                </article>
+            <?php endif; ?>
+            <?php if (have_rows('social_media_links', 'options')): ?>
+                <article class="col-span-4 lg:col-span-2">
+                    <ul class="flex gap-x-2 pt-2 lg:pt-0 lg:justify-end">
+                        <?php while (have_rows('social_media_links', 'options')): the_row(); 
+                        $link = get_sub_field('link');
+                        $icon = get_sub_field('icon');?>
+                            <li><a href="<?= $link['url']; ?>" title="<?= $link['title']; ?>" target="<?= $link['target']; ?>"><?= wp_get_attachment_image($icon['ID'], 'full', 'false', array('class' => 'w-auto mb-3')); ?></a></li>
+                        <?php endwhile; ?>
+                    </ul>
+                </article>
+            <?php endif; ?>
         </section>
     </section>
 </footer>
