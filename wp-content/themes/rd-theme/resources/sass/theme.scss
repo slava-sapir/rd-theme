@@ -11,6 +11,28 @@
     .btn-blue,
     .btn-grey,
     .btn-green {
-        @apply p-2.5 rounded-full;
+        @apply p-2.5 rounded-full text-white;
+    }
+    .btn-orange {
+        @apply bg-orange hover:bg-blue;
+    }
+    .btn-blue {
+        @apply bg-blue hover:bg-orange;
+    }
+    .btn-grey {
+        @apply bg-grey hover:bg-blue;
+    }
+    .btn-green {
+        @apply bg-green hover:bg-blue;
+    }
+}
+
+@layer base {
+    p {
+        @apply text-grey;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-off-black;
     }
 }
