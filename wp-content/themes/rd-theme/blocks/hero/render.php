@@ -12,10 +12,16 @@
 * @package Tenax_North_America
 */
 $image = get_field('image');
-$vido = get_field('video'); ?>
+$video = get_field('video'); ?>
 
-<section class="h-96 md:h-3/4 bg-off-white">
+<section class="h-96 md:h-[805px] bg-off-white">
+    <video autoplay muted loop playsinline>
+        <source src="<?= $video['url']; ?>" type="video/mp4">
+        Your browser does not support the video tag.
+        <?= $video['url']; ?>
+    </video>
     <div class="container">
+        test
         <InnerBlocks class="row gy-50 gx-lg-100" />
     </div>
 </section>
