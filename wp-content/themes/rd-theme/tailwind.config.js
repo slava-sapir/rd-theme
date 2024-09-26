@@ -22,6 +22,7 @@ module.exports = {
             xxxl: '1520px', // Added to the main screen config
         },
         colors: {
+            'white':       '#FFFFFF',
             'off-black':   '#232323',
             'white':       '#FFFFFF',
             'off-white':   '#F1F1F1',
@@ -94,6 +95,35 @@ module.exports = {
                     },
                     '@screen xxxl': {
                         maxWidth: '1440px',
+                    },
+                },
+                '.small-container': {
+                    maxWidth: '100%',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    paddingLeft: '1rem',
+                    paddingRight: '1rem',
+                    '@screen sm': {
+                        maxWidth: '540px',
+                    },
+                    '@screen md': {
+                        maxWidth: '720px',
+                    },
+                    '@screen lg': {
+                        maxWidth: '960px',
+                    }
+                },
+                '.narrow-container': {
+                    maxWidth: '100%',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    paddingLeft: '1rem',
+                    paddingRight: '1rem',
+                    '@screen sm': {
+                        maxWidth: '540px',
+                    },
+                    '@screen md': {
+                        maxWidth: '720px',
                     },
                 }
             })
