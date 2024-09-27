@@ -60,12 +60,7 @@ module.exports = {
       },
     },
   },
-  safelist: [
-    "btn-blue", 
-    "btn-orange", 
-    "btn-green", 
-    "btn-grey"
-],
+  safelist: ["text-4xl", "text-green/50"],
   plugins: [
     function ({ addBase, theme }) {
       addBase({
