@@ -1,6 +1,6 @@
 <?php
 /**
- * ABlack Banner Block Template.
+ * Black Banner Block Template.
  *
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
@@ -14,13 +14,36 @@
  */
 ?>
 
-<section>
-    <div class="container bg-off-black">
+<section class="bg-off-black w-full">
+    <div class="container">
       <div class="flex justify-between">
-        <div class="flex flex-col items-center">
-          <p class="text-green">Discover all our</p>
-          <p class="text-green">100% electric products</p>
+        <div class="flex flex-col justify-center">
+           <InnerBlocks />
         </div>
+        
+        <?php
+          $terms = get_terms( array(
+              'taxonomy' => 'product-category',
+              'hide_empty' => false,
+          ) );
+
+          if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
+              <div class="flex gap-5">
+                  <?php foreach ( $terms as $term ) : 
+                    $category_icon = get_field('category_icon', $term);  
+                  ?>
+                    <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="flex flex-col gap-5 py-12 px-5">
+                        <?php if($category_icon) :
+                            echo wp_get_attachment_image($category_icon['id'], 'full', "", array('class' => 'img-fluid object-fit-contain'));
+                        endif; ?>
+                        <p class="text-xl text-green font-medium"><?php echo esc_html( $term->name ); ?> ></p>
+                    </a>
+                    
+                  <?php endforeach; ?>
+                </a>
+              </div>
+          <?php endif; ?>
+         
       </div>
     </div>
 </section>
