@@ -11,7 +11,7 @@
     .btn-blue,
     .btn-grey,
     .btn-green {
-        @apply p-2.5 rounded-full text-white;
+        @apply px-[1.875rem] py-[0.625rem] rounded-full text-white;
     }
     .btn-orange {
         @apply bg-orange hover:bg-blue;
