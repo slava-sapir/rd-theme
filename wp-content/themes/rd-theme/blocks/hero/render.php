@@ -21,7 +21,6 @@ $video = get_field('video'); ?>
         <?= $video['url']; ?>
     </video>
     <div class="container">
-        test
-        <InnerBlocks class="row gy-50 gx-lg-100" />
+        <InnerBlocks/>
     </div>
 </section>
