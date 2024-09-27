@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <?php get_template_part('template-parts/header'); ?>
-    <div class="container">
         <main class="content">
             <?php
             if (have_posts()) :

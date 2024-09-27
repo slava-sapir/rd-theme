@@ -31,7 +31,6 @@ module.exports = {
       "link-blue": "#1E87F0",
       orange: "#F06822",
       green: "#569C40",
-      greenWithOpacity: "rgba(86, 156, 64, 0.54)",
     },
     fontFamily: {
       sans: ["neue-haas-grotesk-display", "sans-serif"],
@@ -61,6 +60,7 @@ module.exports = {
       },
     },
   },
+  safelist: ["text-4xl", "text-green/50"],
   plugins: [
     function ({ addBase, theme }) {
       addBase({
