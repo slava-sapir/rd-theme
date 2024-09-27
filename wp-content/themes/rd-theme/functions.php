@@ -71,6 +71,7 @@ class Init
 
 new Init();
 new ThemeSetup();
+new Acf();
 new ImageSize(
     name: 'circled-image',
     width: 670,
