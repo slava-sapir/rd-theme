@@ -17,7 +17,7 @@ $anchor = isset($block['anchor']) ? $block['anchor'] : '';
 $classes = isset($block['className']) ? $block['className'] : '';
 ?>
 
-<div id="<?= $anchor; ?>" class="theme-buttons d-flex flex-wrap <?= get_field('button_positioning'); ?> <?= $classes; ?>">
+<div id="<?= $anchor; ?>" class="flex flex-wrap <?= get_field('button_positioning'); ?> <?= $classes; ?>">
     <?php if(have_rows('buttons')): ?>
     <?php while(have_rows('buttons')): the_row(); ?>
             <a href="<?= get_sub_field('button')['url']; ?>" target="<?= get_sub_field('button')['target']; ?>" class="btn-<?= get_sub_field('button_bg'); ?>"><?= get_sub_field('button')['title']; ?></a>
