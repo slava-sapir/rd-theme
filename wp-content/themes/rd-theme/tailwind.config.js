@@ -24,7 +24,6 @@ module.exports = {
         colors: {
             'white':       '#FFFFFF',
             'off-black':   '#232323',
-            'white':       '#FFFFFF',
             'off-white':   '#F1F1F1',
             'grey':        '#747479',
             'light-grey':  '#E8E8E8',
@@ -62,6 +61,7 @@ module.exports = {
             },
         },
     },
+    safelist: ["text-4xl", "text-green/50"],
     plugins: [
         function ({ addBase, theme }) {
             addBase({
