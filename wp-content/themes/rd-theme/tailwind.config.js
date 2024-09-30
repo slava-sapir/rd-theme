@@ -60,7 +60,15 @@ module.exports = {
       },
     },
   },
-  safelist: ["text-4xl", "text-green/50"],
+  safelist: [
+    "text-4xl",
+    "text-green/50",
+    "w-7/12",
+    "w-8/12",
+    "w-9/12",
+    "w-10/12",
+    "w-full",
+  ],
   plugins: [
     function ({ addBase, theme }) {
       addBase({
