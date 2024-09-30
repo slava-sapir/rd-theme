@@ -71,6 +71,7 @@ class Init
 
 new Init();
 new ThemeSetup();
+new Acf();
 new ImageSize(
     name: 'circled-image',
     width: 670,
@@ -99,6 +100,29 @@ $faq_cpt_category->labels(
 )->create(
     taxonomy: 'faq-category',
     slug: 'faq-category'
+);
+
+$product_cpt = new PostType();
+$product_cpt->has_archive = true;
+$product_cpt->labels(
+    name: 'Products',
+    singular: 'Product',
+    menu_name: 'Products'
+)->create(
+    post_type: 'product',
+    slug: 'products'
+);
+
+$product_cpt_category = new Taxonomy();
+$product_cpt_category->labels(
+    name: 'Product Categories',
+    singular_name: 'Product Category',
+    menu_name: 'Product Categories'
+)->add_post_type(
+    post_type:'product'
+)->create(
+    taxonomy: 'product-category',
+    slug: 'product-category'
 );
 
 if( function_exists('acf_add_options_page') ) {
