@@ -50,13 +50,13 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        h1: 48 / 16 + "rem",
-        h2: 44 / 16 + "rem",
-        h3: 36 / 16 + "rem",
-        h4: 24 / 16 + "rem",
-        h5: 20 / 16 + "rem",
-        h6: 18 / 16 + "rem",
-        p: 20 / 16 + "rem",
+        h1: 48 / 16 + "rem", //48px
+        h2: 44 / 16 + "rem", //44px
+        h3: 36 / 16 + "rem", //36px
+        h4: 24 / 16 + "rem", //24px
+        h5: 20 / 16 + "rem", //20px
+        h6: 18 / 16 + "rem", //18px
+        p: 20 / 16 + "rem", //20px
       },
     },
   },
@@ -68,6 +68,7 @@ module.exports = {
     "w-9/12",
     "w-10/12",
     "w-full",
+    "pb-4",
   ],
   plugins: [
     function ({ addBase, theme }) {
