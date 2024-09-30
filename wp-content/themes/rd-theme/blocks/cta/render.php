@@ -27,7 +27,9 @@
             <InnerBlocks/>
         </div>
     </article>
-    <div class="absolute top-0 left-0 w-full h-full flex items-center">
-        <div class="h-[7rem] md:h-[20rem] bg-off-black w-full"></div>
-    </div>
+    <?php if ($backgroundBar): ?>
+        <div class="absolute top-0 left-0 w-full h-full flex items-center">
+            <div class="h-[7rem] md:h-[20rem] bg-off-black w-full"></div>
+        </div>
+    <?php endif; ?>
 </section>
