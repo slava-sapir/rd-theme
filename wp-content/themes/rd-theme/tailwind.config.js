@@ -4,6 +4,9 @@ import forms from "@tailwindcss/forms";
 import typography from "@tailwindcss/typography";
 import daisyui from "daisyui";
 
+import {smallContainer, narrowContainer} from "./tailwind.components";
+
+const base_font_size = 16;
 const breakpoints = {
     'xs': '0px',
     'sm': '576px',
@@ -61,13 +64,13 @@ module.exports = {
         },
         extend: {
             fontSize: {
-                h1: (48 / 16) + 'rem',
-                h2: (44 / 16) + 'rem',
-                h3: (36 / 16) + 'rem',
-                h4: (24 / 16) + 'rem',
-                h5: (20 / 16) + 'rem',
-                h6: (18 / 16) + 'rem',
-                p: (15 / 16) + 'rem',
+                h1: (48 / base_font_size) + 'rem',
+                h2: (44 / base_font_size) + 'rem',
+                h3: (36 / base_font_size) + 'rem',
+                h4: (24 / base_font_size) + 'rem',
+                h5: (20 / base_font_size) + 'rem',
+                h6: (18 / base_font_size) + 'rem',
+                p: (15 / base_font_size) + 'rem',
             },
             containers: {
                 'sm': breakpoints.sm,
@@ -79,73 +82,26 @@ module.exports = {
             },
         },
     },
-    safelist: ["text-4xl", "text-green/50"],
+    safelist: [
+        'small-container',
+        'narrow-container',
+        'text-4xl',
+        'text-green/50'
+    ],
     plugins: [
-        function ({addBase, theme}) {
-            addBase({
-                h1: {fontSize: theme('fontSize.h1')},
-                h2: {fontSize: theme('fontSize.h2')},
-                h3: {fontSize: theme('fontSize.h3')},
-                h4: {fontSize: theme('fontSize.h4')},
-                h5: {fontSize: theme('fontSize.h5')},
-                h6: {fontSize: theme('fontSize.h6')},
-                p: {fontSize: theme('fontSize.p')},
-            });
-        },
-        function ({addComponents}) {
-            addComponents({
-                // '.container': {
-                //     maxWidth: '100%',
-                //     '@screen sm': {
-                //         maxWidth: breakpoints.sm,
-                //     },
-                //     '@screen md': {
-                //         maxWidth: '720px',
-                //     },
-                //     '@screen lg': {
-                //         maxWidth: '960px',
-                //     },
-                //     '@screen xl': {
-                //         maxWidth: '1140px',
-                //     },
-                //     '@screen 2xl': {
-                //         maxWidth: '1320px',
-                //     },
-                //     '@screen 3xl': {
-                //         maxWidth: '1440px',
-                //     },
-                // },
-                '.small-container': {
-                    maxWidth: '100%',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    paddingLeft: '1rem',
-                    paddingRight: '1rem',
-                    '@screen sm': {
-                        maxWidth: breakpoints.sm,
-                    },
-                    '@screen md': {
-                        maxWidth: breakpoints.md,
-                    },
-                    '@screen lg': {
-                        maxWidth: breakpoints.lg,
-                    }
-                },
-                '.narrow-container': {
-                    maxWidth: '100%',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    paddingLeft: '1rem',
-                    paddingRight: '1rem',
-                    '@screen sm': {
-                        maxWidth: breakpoints.sm,
-                    },
-                    '@screen md': {
-                        maxWidth: breakpoints.md,
-                    },
-                }
-            })
-        },
+        // function ({addBase, theme}) {
+        //     addBase({
+        //         h1: {fontSize: theme('fontSize.h1')},
+        //         h2: {fontSize: theme('fontSize.h2')},
+        //         h3: {fontSize: theme('fontSize.h3')},
+        //         h4: {fontSize: theme('fontSize.h4')},
+        //         h5: {fontSize: theme('fontSize.h5')},
+        //         h6: {fontSize: theme('fontSize.h6')},
+        //         p: {fontSize: theme('fontSize.p')},
+        //     });
+        // },
+        smallContainer,
+        narrowContainer,
         container_queries,
         forms,
         typography,
