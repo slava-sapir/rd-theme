@@ -101,7 +101,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "rd-theme\/theme-buttons"
             }
         ]
     ],
@@ -114,5 +114,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727462218
+    "modified": 1727726804
 }
