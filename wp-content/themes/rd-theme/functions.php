@@ -71,8 +71,8 @@ class Init
 
 new Init();
 new ThemeSetup();
-$acf = new Acf();
-$acf->options_pages(
+$rd_acf = new Acf();
+$rd_acf->options_pages(
     subpages: [
         'Header'
     ]
