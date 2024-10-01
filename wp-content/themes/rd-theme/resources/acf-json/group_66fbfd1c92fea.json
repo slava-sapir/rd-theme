@@ -1,9 +1,9 @@
 {
-    "key": "group_66f707bd592b1",
-    "title": "Block: Container",
+    "key": "group_66fbfd1c92fea",
+    "title": "Block: Green CTA Banner",
     "fields": [
         {
-            "key": "field_66f707be65f12",
+            "key": "field_66fbfd1cb438e",
             "label": "Padding Top",
             "name": "padding_top",
             "aria-label": "",
@@ -19,13 +19,13 @@
             "default_value": "",
             "min": "",
             "max": "",
-            "allow_in_bindings": 1,
+            "allow_in_bindings": 0,
             "step": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_66f707ec257f1",
+            "key": "field_66fbfd2fb438f",
             "label": "Padding Bottom",
             "name": "padding_bottom",
             "aria-label": "",
@@ -47,7 +47,7 @@
             "append": ""
         },
         {
-            "key": "field_66f707f7257f2",
+            "key": "field_66fbfd41af0b5",
             "label": "Background",
             "name": "background",
             "aria-label": "",
@@ -61,43 +61,12 @@
                 "id": ""
             },
             "choices": {
-                "bg-white": "White",
-                "bg-off-black": "Offblack",
                 "bg-off-white": "Offwhite",
-                "bg-grey": "Grey",
-                "bg-blue": "Blue",
+                "bg-off-black": "Offblack",
+                "bg-green": "Green",
                 "bg-orange": "Orange",
-                "bg-green": "Green"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_66f70892b17a7",
-            "label": "Container Width",
-            "name": "container_width",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "w-7\/12": "w-7\/12",
-                "w-8\/12": "w-8\/12",
-                "w-9\/12": "w-9\/12",
-                "w-10\/12": "w-10\/12",
-                "w-full": "w-full"
+                "bg-blue": "Blue",
+                "bg-grey": "Grey"
             },
             "default_value": false,
             "return_format": "value",
@@ -114,7 +83,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "rd-theme\/container"
+                "value": "rd-theme\/green-cta-banner"
             }
         ]
     ],
@@ -127,5 +96,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727726619
+    "modified": 1727791910
 }

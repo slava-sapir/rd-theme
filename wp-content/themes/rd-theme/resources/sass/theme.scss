@@ -7,53 +7,9 @@
 @import "../../node_modules/swiper/modules/effect-fade";
 
 @layer components {
-    .btn-orange,
-    .btn-blue,
-    .btn-grey,
-    .btn-green {
-        @apply p-2.5 rounded-full text-white;
-    }
-    .btn-orange {
-        @apply bg-orange hover:bg-blue;
-    }
-    .btn-blue {
-        @apply bg-blue hover:bg-orange;
-    }
-    .btn-grey {
-        @apply bg-grey hover:bg-blue;
-    }
-    .btn-green {
-        @apply bg-green hover:bg-blue;
-    }
+    @import "components/buttons";
 }
 
 @layer base {
-    p {
-        @apply text-grey;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        @apply text-off-black;
-    }
-    h1 {
-        @apply text-3xl sm:text-4xl md:text-5xl;
-      }
-      h2 {
-        @apply text-2xl sm:text-3xl md:text-4xl;
-      }
-      h3 {
-        @apply text-xl sm:text-2xl md:text-3xl;
-      }
-      h4 {
-        @apply text-lg sm:text-xl md:text-2xl;
-      }
-      h5 {
-        @apply text-base sm:text-lg md:text-xl;
-      }
-      h6 {
-        @apply text-sm sm:text-base md:text-lg;
-      }
-      p {
-        @apply text-base sm:text-lg md:text-xl;
-      }
+    @import "base/typography";
 }

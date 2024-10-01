@@ -32,4 +32,15 @@ class Acf
             register_block_type($this->blocks_path . '/' . $directory);
         }
     }
+
+    public function options_pages(array $subpages = []): void
+    {
+        if (function_exists('acf_add_options_page')) {
+            acf_add_options_page();
+
+            foreach ($subpages as $subpage) {
+                acf_add_options_sub_page($subpage);
+            }
+        }
+    }
 }

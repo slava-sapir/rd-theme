@@ -1,7 +1,6 @@
 !*
 node_modules
 vendor
-public
 package-lock.json
 composer.lock
 mix-manifest.json
