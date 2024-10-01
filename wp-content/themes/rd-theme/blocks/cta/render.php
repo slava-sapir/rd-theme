@@ -17,12 +17,10 @@
  $image = get_field('image');
  $paddingTop = get_field('padding_top');
  $paddingBottom = get_field('padding_bottom');
- $container = get_field('container_width');
- $bg = get_field('background');
 ?>
 
-<section class="<?= $bg ?> w-full flex justify-center relative" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
-    <article class="<?= $container ?> h-[25rem] md:h-[47rem] flex justify-center items-center relative z-[3] bg-cover bg-no-repeat" style="<?= $image ? "background-image: url('{$image['url']}');" : ''; ?>">
+<section class="w-full flex justify-center relative" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
+    <article class="container h-[25rem] md:h-[47rem] flex justify-center items-center relative z-[3] bg-cover bg-no-repeat" style="<?= $image ? "background-image: url('{$image['url']}');" : ''; ?>">
         <div class="max-w-[44rem] px-5">
             <InnerBlocks/>
         </div>
