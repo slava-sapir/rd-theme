@@ -1,27 +1,29 @@
 {
-  "name": "redding-designs/rd-theme",
-  "type": "library",
-  "authors": [
-    {
-      "name": "Anthony Trivisano",
-      "email": "anthony@reddingdesigns.com"
+    "name": "redding-designs/rd-theme",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Anthony Trivisano",
+            "email": "anthony@reddingdesigns.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "scripts": {
+        "wordpress:init": [
+            "@wordpress:download",
+            "@wordpress:extract",
+            "@wordpress:copy",
+            "@wordpress:clean"
+        ],
+        "wordpress:download": "curl -LO https://wordpress.org/latest.zip",
+        "wordpress:extract": "unzip latest.zip",
+        "wordpress:copy": "cp -r wordpress/* ./",
+        "wordpress:clean": [
+            "rm -rf latest.zip",
+            "rm -rf wordpress/",
+            "rm -rf ./wp-content/themes/twentytwenty*/"
+        ]
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "RD\\": "wp-content/themes/rd-theme/framework"
-    }
-  },
-  "require": {
-    "vlucas/phpdotenv": "^5.5"
-  },
-  "require-dev": {
-    "laravel/pint": "^1.13"
-  },
-  "scripts": {
-    "rd-pint": [
-      "./vendor/bin/pint",
-      "./vendor/bin/pint --test"
-    ]
-  }
 }

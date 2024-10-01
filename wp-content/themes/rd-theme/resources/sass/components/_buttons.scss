@@ -1,0 +1,18 @@
+.btn-orange,
+.btn-blue,
+.btn-grey,
+.btn-green {
+    @apply p-2.5 rounded-full text-white;
+}
+.btn-orange {
+    @apply bg-orange hover:bg-blue;
+}
+.btn-blue {
+    @apply bg-blue hover:bg-orange;
+}
+.btn-grey {
+    @apply bg-grey hover:bg-blue;
+}
+.btn-green {
+    @apply bg-green hover:bg-blue;
+}
