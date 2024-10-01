@@ -13,12 +13,11 @@
  * @package rd-theme
  */
 
- $paddingTop = get_field('padding_top');
- $paddingBottom = get_field('padding_bottom');
- $bg = get_field('background');
+$paddingTop = get_field('padding_top');
+$paddingBottom = get_field('padding_bottom');
 ?>
 
-<section class="<?= $bg ?>" style="margin-top: <?= $paddingTop ?>px; margin-bottom: <?= $paddingBottom ?>px;">
-    <InnerBlocks class="container grid grid-cols-2"/>
-</section>
+<article class="col-span-1" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
+    <InnerBlocks/>
+</article>
 
