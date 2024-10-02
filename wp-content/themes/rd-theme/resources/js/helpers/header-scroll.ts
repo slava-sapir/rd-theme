@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector(".navbar");
+    const navbar = document.querySelector("header");
     const navbarStart = document.querySelector(".navbar-start");
     const navbarItems = document.querySelectorAll(".navbar-item a");
     const icon = document.getElementById("phone-icon") as HTMLImageElement;
+    const svgCarret = document.querySelector(
+      ".navbar-item svg"
+    ) as HTMLImageElement;
     const svg = document.querySelector("#mobileMenuBtn svg") as HTMLImageElement;
     const btnSvg = document.querySelector(".btn-circle svg") as HTMLImageElement;
 
@@ -17,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const applyFixedHeader = () => {
-        if (navbar && navbarStart && navbarItems && icon && svg && btnSvg) {
+        if (navbar && navbarStart && navbarItems && icon && svg && btnSvg && svgCarret) {
             navbar.classList.replace("bg-blue", "bg-white");
             navbarStart.classList.remove("brightness-0", "invert");
 
@@ -26,13 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             icon.style.filter = "invert(1)";
-            svg.style.filter = "invert(1)";
+            svg.style.filter = "invert(0)";
+            svgCarret.style.filter = "invert(1)";
             btnSvg.setAttribute("stroke", "black");
         }
     };
 
     const resetHeader = () => {
-        if (navbar && navbarStart && navbarItems && icon && svg && btnSvg) {
+        if (navbar && navbarStart && navbarItems && icon && svg && btnSvg && svgCarret) {
             navbar.classList.replace("bg-white", "bg-blue");
             navbarStart.classList.add("brightness-0", "invert");
 
@@ -42,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             icon.style.filter = "invert(0)";
             svg.style.filter = "invert(0)";
+            svgCarret.style.filter = "invert(0)";
             btnSvg.setAttribute("stroke", "white");
         }
     };
