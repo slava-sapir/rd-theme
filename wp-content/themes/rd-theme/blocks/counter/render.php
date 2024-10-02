@@ -14,8 +14,6 @@
  */
 ?>
 
-<!-- <section style="background: linear-gradient(to bottom, #232323 49%, #FFFFFF 49%);" class="flex justify-center items-center"> -->
-<!-- <section class="h-[365px] flex justify-center items-center bg-gradient-to-b from-off-black from-0% to-white to-50% relative"> -->
 <section class="pt-[50px] flex justify-center items-center bg-gradient-to-b from-off-black to-white from-[49%] to-[49%] relative">
   <div class="flex flex-wrap gap-[100px] z-50">
         <?php if (have_rows('counter')) : ?>
@@ -31,5 +29,4 @@
           </div>
         <?php endwhile; endif; ?>
   </div>
-
 </section>
