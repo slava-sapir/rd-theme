@@ -33,7 +33,7 @@
         <div class="navbar-end w-full hidden lg:flex justify-center xl:justify-end relative">
             <div class="flex flex-col gap-3 xl:gap-7">
                 <div class="flex flex-row gap-3 justify-center xl:justify-end items-center">
-                    <img src="<?= get_template_directory_uri(); ?>/resources/images/icons/phone_icon.svg"
+                    <img src="<?= get_template_directory_uri(); ?>/public/images/icons/phone_icon.svg"
                          alt="phone_icon" class="img-fluid" id="phone-icon">
                     <?php
                     $contact_number = get_field('phone', 'options');
@@ -133,7 +133,7 @@
     <div id="mobileMenu"
          class="hidden flex-col gap-4 bg-blue w-full absolute top-full left-0 z-40 lg:hidden items-start p-[30px]">
         <div class="flex flex-row gap-3 justify-center xl:justify-end items-center">
-            <img src="<?= get_template_directory_uri(); ?>/resources/images/icons/phone_icon.svg" alt="phone_icon"
+            <img src="<?= get_template_directory_uri(); ?>/public/images/icons/phone_icon.svg" alt="phone_icon"
                  class="img-fluid">
             <?php
             $contact_number = get_field('phone', 'options');
