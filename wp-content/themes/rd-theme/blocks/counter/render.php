@@ -15,7 +15,6 @@
 ?>
 
 <div class="flex flex-wrap gap-[100px]">
-   
       <?php if (have_rows('counter')) : ?>
         <?php while (have_rows('counter')) : the_row(); 
          $counter_number = get_sub_field('counter_number');

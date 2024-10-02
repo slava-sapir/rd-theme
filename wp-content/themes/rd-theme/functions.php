@@ -71,7 +71,13 @@ class Init
 
 new Init();
 new ThemeSetup();
-new Acf();
+$rd_acf = new Acf();
+$rd_acf->options_pages(
+    subpages: [
+        'Header'
+    ]
+);
+
 new ImageSize(
     name: 'circled-image',
     width: 670,
@@ -96,7 +102,7 @@ $faq_cpt_category->labels(
     singular_name: 'FAQ Category',
     menu_name: 'FAQ Categories'
 )->add_post_type(
-    post_type:'faq'
+    post_type: 'faq'
 )->create(
     taxonomy: 'faq-category',
     slug: 'faq-category'
@@ -119,8 +125,9 @@ $product_cpt_category->labels(
     singular_name: 'Product Category',
     menu_name: 'Product Categories'
 )->add_post_type(
-    post_type:'product'
+    post_type: 'product'
 )->create(
     taxonomy: 'product-category',
     slug: 'product-category'
 );
+
