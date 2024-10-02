@@ -32,7 +32,7 @@
 
         <div class="navbar-end w-full hidden lg:flex justify-center xl:justify-end relative">
             <div class="flex flex-col gap-3 xl:gap-7">
-                <div class="flex flex-row gap-3 justify-center xl:justify-end items-center">
+                <div class="flex flex-row gap-3 justify-center xl:justify-end items-center navbar-item">
                     <img src="<?= get_template_directory_uri(); ?>/public/images/icons/phone_icon.svg"
                          alt="phone_icon" class="img-fluid" id="phone-icon">
                     <?php
@@ -40,7 +40,8 @@
                     if ($contact_number):
                         ?>
                         <a href="<?= $contact_number['url']; ?>"
-                           class="text-base font-medium text-white"><?= $contact_number['title']; ?></a>
+                           class="text-base font-medium text-white"><?= $contact_number['title']; ?>
+                        </a>
                     <?php endif; ?>
                 </div>
 
@@ -72,7 +73,7 @@
                                                         <a href="javascript:void(0)" tabindex="0" role="button"
                                                            class="py-3.5 pr-2.5 pl-3 hover:bg-green border-b-2 border-light-grey last:border-b-0 flex items-center justify-between text-base font-medium text-black group">
                                                             <?php echo esc_html(get_sub_field('sub_menu_link')['title']); ?>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="5"
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="5" id="svg"
                                                                  height="12" viewBox="0 0 5 12" fill="none"
                                                                  class="ml-2 transition-transform duration-300 ease-in-out transform group-hover:rotate-90">
                                                                 <path
@@ -111,7 +112,7 @@
                             <?php else: ?>
 
 
-                                <li class="">
+                                <li class="navbar-item">
                                     <a class="text-base font-medium text-white"
                                        href="<?php echo esc_url(get_sub_field('nav_link')['url']); ?>">
                                         <?php echo esc_html(get_sub_field('nav_link')['title']); ?>
