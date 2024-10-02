@@ -1,6 +1,6 @@
 <?php
 /**
- * Green CTA Banner
+ * Column
  *
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
@@ -15,9 +15,11 @@
 
 $paddingTop = get_field('padding_top');
 $paddingBottom = get_field('padding_bottom');
+$width = get_field('column_width');
+$gap = get_field('gap');
 ?>
 
-<article class="col-span-1" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
+<article class="<?= $width ?> <?= $gap ?> gap-y-4" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
     <InnerBlocks/>
 </article>
 
