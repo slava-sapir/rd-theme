@@ -18,7 +18,7 @@ $paddingBottom = get_field('padding_bottom');
 $gap = get_field('gap');
 ?>
 
-<article class="container" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
+<section class="container" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
     <InnerBlocks class="grid grid-cols-12 <?= $gap ?>"/>
-</article>
+</section>
 
