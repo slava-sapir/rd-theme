@@ -1,4 +1,4 @@
-import "./helpers/header-scroll";
-import "./helpers/toggle-mobile";
-import "./helpers/mobile-functionality";
-import "./helpers/counter";
+import "./components/header-scroll";
+import "./components/toggle-mobile";
+import "./components/mobile-functionality";
+import "./components/counter";
