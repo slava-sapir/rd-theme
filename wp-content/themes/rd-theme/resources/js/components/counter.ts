@@ -1,6 +1,6 @@
-class Counter {
-    private readonly target: number;
-    private readonly increment: number;
+export class Counter {
+    private target: number;
+    private increment: number;
     private count: number = 0;
     private started: boolean = false;
     private counterElement: Element;
@@ -38,11 +38,3 @@ class Counter {
         }
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".counter");
-
-    counters.forEach((counterElement: Element) => {
-        new Counter(counterElement);
-    });
-});
