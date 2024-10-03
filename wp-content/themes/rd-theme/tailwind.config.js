@@ -31,8 +31,8 @@ module.exports = {
             'md': breakpoints.md,
             'lg': breakpoints.lg,
             'xl': breakpoints.xl,
-            '2xl': breakpoints['2xl'], // Added to the main screen config
-            '3xl': breakpoints['3xl'], // Added to the main screen config
+            '2xl': breakpoints['2xl'],
+            '3xl': breakpoints['3xl'],
         },
         colors: {
             'white': '#FFFFFF',
@@ -52,15 +52,6 @@ module.exports = {
         container: {
             center: true,
             padding: '1rem',
-            // You can now inherit from the main screens definition without redefining
-            // screens: {
-            //     sm:   '540px',
-            //     md:   '720px',
-            //     lg:   '960px',
-            //     xl:   '1140px',
-            //     xxl:  '1320px', // Same as before
-            //     xxxl: '1440px', // Same as before
-            // }
         },
         extend: {
             fontSize: {
@@ -86,7 +77,14 @@ module.exports = {
         'small-container',
         'narrow-container',
         'text-4xl',
-        'text-green/50'
+        'text-green/50',
+        'gap-x-5',
+        'gap-x-[50px]',
+        'gap-x-[100px]',
+        'col-span-3',
+        'col-span-4',
+        'col-span-6',
+        'col-span-9',
     ],
     plugins: [
         // function ({addBase, theme}) {

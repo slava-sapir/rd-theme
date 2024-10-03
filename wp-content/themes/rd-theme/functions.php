@@ -74,7 +74,9 @@ new ThemeSetup();
 $rd_acf = new Acf();
 $rd_acf->options_pages(
     subpages: [
-        'Header'
+        'Header',
+        'Footer',
+        'Contacts'
     ]
 );
 
