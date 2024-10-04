@@ -61,9 +61,9 @@
                 "id": ""
             },
             "choices": {
-                "gap-x-5": "20px",
-                "gap-x-[50px]": "50px",
-                "gap-x-[100px]": "100px"
+                "gap-5": "20px",
+                "gap-[50px]": "50px",
+                "gap-[100px]": "100px"
             },
             "default_value": false,
             "return_format": "value",
@@ -93,5 +93,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727881450
+    "modified": 1728055099
 }
