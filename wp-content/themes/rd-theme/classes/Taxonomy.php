@@ -6,6 +6,7 @@ class Taxonomy
 {
     public bool $public = true;
     public bool $hierarchical = true;
+    public bool $show_in_rest = true;
 
 
     protected string $taxonomy;
@@ -70,6 +71,7 @@ class Taxonomy
             'rewrite'      => [
                 'slug' => $this->slug
             ],
+            'show_in_rest' => $this->show_in_rest,
             'supports'     => $this->supports,
         ]);
     }
