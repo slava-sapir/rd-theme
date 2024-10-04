@@ -1,6 +1,6 @@
 <?php
 /**
- * Green CTA Banner
+ * Image Block Template.
  *
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
@@ -12,13 +12,10 @@
  * 
  * @package rd-theme
  */
-
- $paddingTop = get_field('padding_top');
- $paddingBottom = get_field('padding_bottom');
- $bg = get_field('background');
 ?>
 
-<section class="<?= $bg ?>" style="margin-top: <?= $paddingTop ?>px; margin-bottom: <?= $paddingBottom ?>px;">
-    <InnerBlocks class="container grid grid-cols-12"/>
-</section>
-
+<?php
+$classes = isset($block['className']) ? $block['className'] : '';
+$image = get_field('image');
+$size = get_field('image_size');
+echo wp_get_attachment_image($image['ID'], $size, false, ['class' => $classes]);
