@@ -32,8 +32,12 @@ $query = new WP_Query(array(
         $count++;
         $backgroundImage = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
   ?>
-      <div class="relative w-full bg-no-repeat <?= $count % 2 === 1 ? 'bg-right' : 'bg-left' ?> bg-cover h-[710px] flex justify-center items-center" style="background-image: url('<?php echo esc_url($backgroundImage); ?>');">
-        <div class="absolute inset-0 bg-light-grey"></div>
+      <!-- <div class="relative w-full bg-no-repeat <?= $count % 2 === 1 ? 'bg-right' : 'bg-left' ?> bg-cover h-[710px] flex justify-center items-center" style="background-image: url('<?php echo esc_url($backgroundImage); ?>'); background-color:grey; mix-blend-mode: multiply;">
+        <div class="absolute inset-0 bg-custom-gradient-dark"></div>
+      </div> -->
+
+      <div class="relative w-full  bg-grey h-[710px] flex justify-end items-center">
+        <img src="<?php echo esc_url($backgroundImage); ?>" alt="Image with White Background" style="mix-blend-mode: multiply; ">
       </div>
 
     <?php }
