@@ -11,21 +11,35 @@
 *
 * @package Tenax_North_America
 */
-$bg_image = get_field('bg_image');
-$filter_color = get_field('filter_color'); 
-echo $filter_color;
-$title = get_field('title'); 
-$text = get_field('text'); 
-$link = get_field('link');
-?>
-  <div class="relative w-full pt-[70px] pb-[40px] pl-[60px] pr-[135px] bg-no-repeat bg-center bg-cover h-[600px] flex flex-col justify-between" style="background-image: url('<?php echo $bg_image['url']; ?>');">
-    <div class="absolute inset-0 bg-<?= $filter_color ? $filter_color : ''; ?> "></div>
-  <div class="">
-    <h3 class="text-white text-4xl font-medium mb-[18px]"><?= $title; ?></h3>
-    <p class="text-white text-base"><?= $text; ?></p>
-  </div>
-  <?php if ($link) : ?>
-    <a class="text-white text-base" href="<?= $link['url']; ?>"><?= $link['title']; ?>&nbsp;&nbsp;&nbsp;></a>
-  <?php endif; ?>
 
+$query = new WP_Query(array(
+    'post_type' => 'product', 
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'product-category',
+            'field'    => 'slug',
+            'terms'    => 'featured',
+        ),
+    ),
+));
+?>
+
+<div class="flex gap-5">
+  <?php if ($query->have_posts()) {
+    $count = 0;
+      while ($query->have_posts()) {
+        $query->the_post();
+        $count++;
+        $backgroundImage = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
+  ?>
+      <div class="relative w-full bg-no-repeat <?= $count % 2 === 1 ? 'bg-right' : 'bg-left' ?> bg-cover h-[710px] flex justify-center items-center" style="background-image: url('<?php echo esc_url($backgroundImage); ?>');">
+        <div class="absolute inset-0 bg-light-grey"></div>
+      </div>
+
+    <?php }
+      wp_reset_postdata();
+    } else {
+        echo '<p>No featured products found.</p>';
+    }
+  ?>
 </div>
