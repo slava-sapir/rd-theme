@@ -12,38 +12,15 @@
 * @package Tenax_North_America
 */
 
-$query = new WP_Query(array(
-    'post_type' => 'product', 
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'product-category',
-            'field'    => 'slug',
-            'terms'    => 'featured',
-        ),
-    ),
-));
+$product = get_field('featured_product');
+  if ($product) {
+    $backgroundImage = get_the_post_thumbnail_url($product->ID, 'full');
+  }
 ?>
-
-<div class="flex gap-5">
-  <?php if ($query->have_posts()) {
-    $count = 0;
-      while ($query->have_posts()) {
-        $query->the_post();
-        $count++;
-        $backgroundImage = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
-  ?>
-      <!-- <div class="relative w-full bg-no-repeat <?= $count % 2 === 1 ? 'bg-right' : 'bg-left' ?> bg-cover h-[710px] flex justify-center items-center" style="background-image: url('<?php echo esc_url($backgroundImage); ?>'); background-color:grey; mix-blend-mode: multiply;">
-        <div class="absolute inset-0 bg-custom-gradient-dark"></div>
-      </div> -->
-
-      <div class="relative w-full  bg-grey h-[710px] flex justify-end items-center">
-        <img src="<?php echo esc_url($backgroundImage); ?>" alt="Image with White Background" style="mix-blend-mode: multiply; ">
-      </div>
-
-    <?php }
-      wp_reset_postdata();
-    } else {
-        echo '<p>No featured products found.</p>';
-    }
-  ?>
+<div class="relative w-full bg-no-repeat bg-center bg-cover h-[710px] flex justify-center items-center" style="background-image: url('<?php echo esc_url($backgroundImage); ?>'); ">
+  <div class="flex flex-col justify-center items-center gap-[20px]">
+   <h2 class="text-white font-medium"><?php echo $product->post_title; ?></h2>
+   <p class="text-white">The brand new <?php echo $product->post_title; ?> is here</p>
+   <a class="btn-orange text-white py-2.5 px-7" href="<?php echo get_permalink($product->ID); ?>">Go to page ></a>
+  </div>
 </div>
