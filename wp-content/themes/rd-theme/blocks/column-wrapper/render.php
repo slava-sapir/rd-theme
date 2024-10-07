@@ -1,6 +1,6 @@
 <?php
 /**
- * Green CTA Banner
+ * Column Wrapper
  *
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
@@ -13,12 +13,12 @@
  * @package rd-theme
  */
 
- $paddingTop = get_field('padding_top');
- $paddingBottom = get_field('padding_bottom');
- $bg = get_field('background');
+$paddingTop = get_field('padding_top');
+$paddingBottom = get_field('padding_bottom');
+$gap = get_field('gap');
 ?>
 
-<section class="<?= $bg ?>" style="margin-top: <?= $paddingTop ?>px; margin-bottom: <?= $paddingBottom ?>px;">
-    <InnerBlocks class="container grid grid-cols-12"/>
+<section class="container" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
+    <InnerBlocks class="grid grid-cols-12 <?= $gap ?>"/>
 </section>
 
