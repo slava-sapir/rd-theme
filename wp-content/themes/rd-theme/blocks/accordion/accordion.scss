@@ -1,0 +1,7 @@
+.collapse-title {
+    h4 {
+        input[type="radio"]:checked + & {
+            color: #F06822 !important;
+        }
+    }
+}
