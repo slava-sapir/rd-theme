@@ -93,29 +93,6 @@ new ImageSize(
     crop: false
 );
 
-$faq_cpt = new PostType();
-$faq_cpt->has_archive = false;
-$faq_cpt->labels(
-    name: 'FAQs',
-    singular: 'FAQ',
-    menu_name: 'FAQs'
-)->create(
-    post_type: 'faq',
-    slug: 'faqs'
-);
-
-$faq_cpt_category = new Taxonomy();
-$faq_cpt_category->labels(
-    name: 'FAQ Categories',
-    singular_name: 'FAQ Category',
-    menu_name: 'FAQ Categories'
-)->add_post_type(
-    post_type: 'faq'
-)->create(
-    taxonomy: 'faq-category',
-    slug: 'faq-category'
-);
-
 $product_cpt = new PostType();
 $product_cpt->has_archive = true;
 $product_cpt->labels(
@@ -138,4 +115,3 @@ $product_cpt_category->labels(
     taxonomy: 'product-category',
     slug: 'product-category'
 );
-
