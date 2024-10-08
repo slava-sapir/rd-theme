@@ -2,6 +2,7 @@ import { MobileMenuHandler } from "./components/toggle-mobile";
 import { DropdownManager } from "./components/mobile-functionality";
 import { Counter } from "./components/counter";
 import { NavbarHandler } from "./components/header-scroll";
+import "./components/progress";
 
 document.addEventListener("DOMContentLoaded", () => {
   new NavbarHandler();

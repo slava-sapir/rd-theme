@@ -47,9 +47,6 @@
 
 </style>
 
-   <!-- <div class="bg-orange">
-    <div id="myBar" class="bg-green" style="height:24px;width:50%"></div>
-  </div> -->
   <div class="circular-bar">
         <div class="percent">0%</div>
   </div>
