@@ -45,6 +45,7 @@ module.exports = {
             'link-blue': '#1E87F0',
             'orange': '#F06822',
             'green': '#569C40',
+            'red': '#FF0000',
         },
         fontFamily: {
             sans: ['neue-haas-grotesk-display', 'sans-serif'],
