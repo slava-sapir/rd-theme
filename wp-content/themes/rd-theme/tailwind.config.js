@@ -78,13 +78,15 @@ module.exports = {
         'narrow-container',
         'text-4xl',
         'text-green/50',
-        'gap-x-5',
-        'gap-x-[50px]',
-        'gap-x-[100px]',
+        'sm:gap-x-3',
+        'md:gap-x-5',
+        'lg:gap-x-[50px]',
+        'lg:gap-x-[100px]',
         'lg:col-span-3',
         'lg:col-span-4',
         'lg:col-span-6',
         'lg:col-span-9',
+        'auto-cols-max',
     ],
     plugins: [
         // function ({addBase, theme}) {
