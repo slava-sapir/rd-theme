@@ -71,6 +71,9 @@ module.exports = {
                 '2xl': breakpoints['2xl'],
                 '3xl': breakpoints['3xl'],
             },
+            boxShadow: {
+                'accordion': '1px 8px 17px 0px rgba(0, 0, 0, 0.10)'
+            }
         },
     },
     safelist: [
@@ -88,6 +91,9 @@ module.exports = {
         'lg:col-span-9',
         'auto-cols-max',
     ],
+    daisyui: {
+        themes: ["light"], // Disable dark mode by only using the light theme
+    },
     plugins: [
         // function ({addBase, theme}) {
         //     addBase({
