@@ -13,11 +13,10 @@
 */
 ?>
 
-<style>
-
+<!-- <style>
 .circular-bar{
-  width: 260px;
-  height: 260px;
+  width: 120px;
+  height: 120px;
   background: conic-gradient(#4285f4 1.5deg, #e8f0f7 0deg);
   border-radius: 50%;
   display: flex;
@@ -31,9 +30,9 @@
 .circular-bar::before{
   content: "";
   position: absolute;
-  width: 220px;
-  height: 220px;
-  background: #e8f0f7;
+  width: 100px;
+  height: 100px;
+  background: #FFFFFF;
   border-radius: 50%;
   box-shadow: inset 6px 6px 10px -1px rgba(0,0,0,0.15),
   inset -6px -6px 10px -1px rgba(255,255,255,0.7);
@@ -43,12 +42,14 @@
   z-index: 10;
   font-size: 30px;
 }
+</style> -->
 
+<?php 
+ $bg_color = get_field('bg_color');
+?>
 
-</style>
-
-  <div class="circular-bar">
-        <div class="percent">0%</div>
+  <div class="relative circular-bar w-[120px] h-[120px] bg-green/50 rounded-full flex justify-center items-center before:w-[100px] before:h-[100px] before:absolute before:rounded-full before:bg-white">   
+      <div class="percent z-10 text-off-black text-4xl font-normal">0%</div>
   </div>
 
 
