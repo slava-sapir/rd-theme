@@ -86,6 +86,12 @@ new ImageSize(
     height: 335,
     crop: true
 );
+new ImageSize(
+    name: 'icon',
+    width: 106,
+    height: 48,
+    crop: false
+);
 
 $faq_cpt = new PostType();
 $faq_cpt->has_archive = false;

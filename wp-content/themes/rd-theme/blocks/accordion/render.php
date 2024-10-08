@@ -25,7 +25,7 @@ $classes = isset($block['className']) ? $block['className'] : '';
     <div class="collapse collapse-plus bg-white rounded-none shadow-accordion mb-[30px] last:mb-0">
         <input type="radio" name="accordion" class="w-full h-full peer" />
         <div class="collapse-title flex items-center pt-[30px] pl-[30px] peer-checked:text-orange group">
-            <?= wp_get_attachment_image(get_sub_field('icon')['id'], 'full', true); ?>
+            <?= wp_get_attachment_image(get_sub_field('icon')['id'], 'icon', true); ?>
             <h4 class="text-grey peer-checked:text-orange group-checked:text-orange font-medium text-h5 pl-4"><?= get_sub_field('title'); ?></h4>
         </div>
         <div class="collapse-content px-[80px] xl:px-[105px] peer-checked:pb-14">
