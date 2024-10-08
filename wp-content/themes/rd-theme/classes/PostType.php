@@ -7,6 +7,7 @@ class PostType
     public string $label;
     public bool $public = true;
     public bool $has_archive = true;
+    public bool $show_in_rest = true;
 
     protected string $post_type;
     protected string $slug;
@@ -53,6 +54,7 @@ class PostType
             'rewrite'     => [
                 'slug' => $this->slug
             ],
+            'show_in_rest' => $this->show_in_rest,
             'supports'    => $this->supports,
         ]);
     }
