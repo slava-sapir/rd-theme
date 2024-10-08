@@ -13,7 +13,6 @@
 */
 $bg_image = get_field('bg_image');
 $filter_color = get_field('filter_color'); 
-echo $filter_color;
 $title = get_field('title'); 
 $text = get_field('text'); 
 $link = get_field('link');
