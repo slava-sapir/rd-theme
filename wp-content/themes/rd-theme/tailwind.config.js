@@ -81,10 +81,10 @@ module.exports = {
         'gap-x-5',
         'gap-x-[50px]',
         'gap-x-[100px]',
-        'col-span-3',
-        'col-span-4',
-        'col-span-6',
-        'col-span-9',
+        'lg:col-span-3',
+        'lg:col-span-4',
+        'lg:col-span-6',
+        'lg:col-span-9',
     ],
     plugins: [
         // function ({addBase, theme}) {
