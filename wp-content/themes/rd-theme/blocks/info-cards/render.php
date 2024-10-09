@@ -1,6 +1,6 @@
 <?php
 /**
- * Green CTA Banner
+ * Info Cards
  *
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
