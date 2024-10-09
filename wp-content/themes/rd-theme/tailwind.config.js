@@ -88,6 +88,7 @@ module.exports = {
         'col-span-4',
         'col-span-6',
         'col-span-9',
+        'font-bold',
     ],
     daisyui: {
         themes: ["light"], // Disable dark mode by only using the light theme
