@@ -80,7 +80,7 @@ module.exports = {
         'small-container',
         'narrow-container',
         'text-4xl',
-        'text-green/50',
+        'text-white/62',
         'gap-x-5',
         'gap-x-[50px]',
         'gap-x-[100px]',
