@@ -1,6 +1,6 @@
 <?php
 /**
- * Container Block Template.
+ * Carousel Block Template.
  *
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
@@ -20,7 +20,7 @@ $classes = isset($block['className']) ? $block['className'] : '';
 ?>
 
 <section id="<?= $anchor; ?>" class="<?= $classes; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
-    <div class="swiper-container image-carousel">
+    <div class="swiper-container image-carousel overflow-x-hidden">
         <div class="swiper-wrapper">
             <?php while(have_rows('carousel')): the_row(); ?>
             <div class="swiper-slide">
@@ -33,11 +33,9 @@ $classes = isset($block['className']) ? $block['className'] : '';
                 <?php endif; ?>
             </div>
             <?php endwhile; ?>
-            <!-- Add more slides here -->
         </div>
 
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination !static pt-12 lg:pt-[100px]"></div>
     </div>
 
 </section>
