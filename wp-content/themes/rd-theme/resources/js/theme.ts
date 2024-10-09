@@ -15,28 +15,64 @@ document.addEventListener("DOMContentLoaded", () => {
     new Counter(counterElement);
   });
 
-  window.onload = () => {
-    const circularBars = document.querySelectorAll(".circular-bar");
+  // window.onload = () => {
+  //   const circularBars = document.querySelectorAll(".circular-bar");
 
-    circularBars.forEach((circularBar) => {
-      const percentValue = circularBar.querySelector(".percent") as HTMLElement;
-      const bgcolor = circularBar.getAttribute("data-bgcolor") || "#000";
-      const opacityColor =
-        circularBar.getAttribute("data-opacitycolor") || "#fff";
-      const finalValue = parseInt(
-        circularBar.getAttribute("data-percent") || "0"
-      );
+  //   circularBars.forEach((circularBar) => {
+  //     const percentValue = circularBar.querySelector(".percent") as HTMLElement;
+  //     const bgcolor = circularBar.getAttribute("data-bgcolor") || "#000";
+  //     const opacityColor =
+  //       circularBar.getAttribute("data-opacitycolor") || "#fff";
+  //     const finalValue = parseInt(
+  //       circularBar.getAttribute("data-percent") || "0"
+  //     );
 
-      const progressBar = new CircularProgressBar(
-        circularBar as HTMLElement,
-        percentValue,
-        bgcolor,
-        opacityColor,
-        finalValue
-      );
-      progressBar.start();
+  //     const progressBar = new CircularProgressBar(
+  //       circularBar as HTMLElement,
+  //       percentValue,
+  //       bgcolor,
+  //       opacityColor,
+  //       finalValue
+  //     );
+  //     progressBar.start();
+  //   });
+  // };
+
+
+window.onload = () => {
+  const circularBars = document.querySelectorAll(".circular-bar");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const circularBar = entry.target as HTMLElement;
+        const percentValue = circularBar.querySelector(
+          ".percent"
+        ) as HTMLElement;
+        const bgcolor = circularBar.getAttribute("data-bgcolor") || "#000";
+        const opacityColor =
+          circularBar.getAttribute("data-opacitycolor") || "#fff";
+        const finalValue = parseInt(
+          circularBar.getAttribute("data-percent") || "0"
+        );
+
+        const progressBar = new CircularProgressBar(
+          circularBar as HTMLElement,
+          percentValue,
+          bgcolor,
+          opacityColor,
+          finalValue
+        );
+        progressBar.start();
+        observer.unobserve(circularBar);
+      }
     });
-  };
+  });
 
+  // Observe each circular bar element
+  circularBars.forEach((circularBar) => {
+    observer.observe(circularBar);
+  });
+};
 
 });
