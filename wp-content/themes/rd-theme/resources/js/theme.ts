@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
         circularBar.getAttribute("data-percent") || "0"
       );
 
-      // Initialize the progress bar for each circularBar element
       const progressBar = new CircularProgressBar(
         circularBar as HTMLElement,
         percentValue,
