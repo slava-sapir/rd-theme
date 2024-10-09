@@ -95,7 +95,8 @@
             "choices": {
                 "container": "Default",
                 "small-container": "Small",
-                "narrow-container": "Narrow"
+                "narrow-container": "Narrow",
+                "medium-container": "Medium"
             },
             "default_value": false,
             "return_format": "value",
@@ -125,5 +126,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727897609
+    "modified": 1728484975
 }

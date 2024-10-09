@@ -5,7 +5,11 @@ import typography from "@tailwindcss/typography";
 import daisyui from "daisyui";
 
 import breakpoints from "./tailwind.breakpoints";
-import {smallContainer, narrowContainer} from "./tailwind.components";
+import {
+  smallContainer,
+  narrowContainer,
+  mediumContainer,
+} from "./tailwind.components";
 import safelist from "./tailwind.safelist";
 
 const base_font_size = 16;
@@ -70,12 +74,17 @@ module.exports = {
         "custom-gradient-dark":
           "linear-gradient(0deg, rgba(58, 58, 56, 0.90) 0%, rgba(58, 58, 56, 0.90) 100%)",
       },
+      gap: {
+        "50px": "50px",
+        "100px": "100px",
+      },
     },
   },
   safelist: safelist,
   plugins: [
     smallContainer,
     narrowContainer,
+    mediumContainer,
     container_queries,
     forms,
     typography,
