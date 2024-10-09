@@ -20,6 +20,6 @@ $classes = isset($block['className']) ? $block['className'] : '';
 <div id="<?= $anchor; ?>" class="flex flex-wrap <?= get_field('button_positioning'); ?> <?= $classes; ?>">
     <?php if(have_rows('buttons')): ?>
     <?php while(have_rows('buttons')): the_row(); ?>
-            <a href="<?= get_sub_field('button')['url']; ?>" target="<?= get_sub_field('button')['target']; ?>" class="btn-<?= get_sub_field('button_bg'); ?>"><?= get_sub_field('button')['title']; ?></a>
+            <a href="<?= get_sub_field('button')['url']; ?>" target="<?= get_sub_field('button')['target']; ?>" class="bg-<?= get_sub_field('button_bg'); ?>"><?= get_sub_field('button')['title']; ?></a>
     <?php endwhile; endif; ?>
 </div>
