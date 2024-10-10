@@ -61,9 +61,9 @@
                 "id": ""
             },
             "choices": {
-                "gap-3 md:gap-5": "20px",
-                "gap-3 md:gap-5 lg:gap-50px": "50px",
-                "gap-3 md:gap-5 lg:gap-100px": "100px"
+                "sm:gap-x-3 md:gap-x-5": "20px",
+                "sm:gap-x-3 md:gap-x-5 lg:gap-x-[50px]": "50px",
+                "sm:gap-x-3 md:gap-x-5 lg:gap-x-[100px]": "100px"
             },
             "default_value": false,
             "return_format": "value",
@@ -93,5 +93,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728484050
+    "modified": 1728402784
 }
