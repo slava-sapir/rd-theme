@@ -23,7 +23,7 @@ $padding_right = get_field('padding_right');
 ?>
   <div class="relative w-full bg-no-repeat bg-center bg-cover flex flex-col justify-between" style="background-image: url('<?php echo $bg_image['url']; ?>'); padding-top: <?= $padding_top; ?>px; padding-bottom: <?= $padding_bottom; ?>px; padding-left: <?= $padding_left; ?>px; padding-right: <?= $padding_right; ?>px">
     <div class="absolute inset-0 bg-<?= $filter_color ? $filter_color : ''; ?> "></div>
-  <div class="">
+  <div>
     <h3 class="text-white text-4xl font-medium mb-[18px]"><?= $title; ?></h3>
     <p class="text-white text-base"><?= $text; ?></p>
   </div>
