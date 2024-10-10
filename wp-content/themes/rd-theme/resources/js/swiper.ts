@@ -13,19 +13,35 @@ document.addEventListener("DOMContentLoaded", function () {
             el: '.swiper-pagination',
             clickable: true,
         },
-        // breakpoints: {
-        //     640: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 10,
-        //     },
-        //     768: {
-        //         slidesPerView: 2,
-        //         spaceBetween: 20,
-        //     },
-        //     1024: {
-        //         slidesPerView: 3,
-        //         spaceBetween: 30,
-        //     },
-        // },
+    });
+
+    const productSwiper = new Swiper(".product-carousel", {
+        modules: [Pagination],
+        slidesPerView: 2,
+        centeredSlides: true,
+        spaceBetween: 20,
+        initialSlide: 0,
+        loop: false,
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 3,
+                initialSlide: 1,
+            },
+            768: {
+                slidesPerView: 3,
+                initialSlide: 1,
+                spaceBetween: 30,
+            },
+            992: {
+                slidesPerView: 5,
+                spaceBetween: 40,
+                initialSlide: 2,
+            }
+        }
     });
 });
