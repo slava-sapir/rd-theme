@@ -1,6 +1,6 @@
 <?php
 /**
- * Column
+ * Page Title Block Template.
  *
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
@@ -12,14 +12,12 @@
  * 
  * @package rd-theme
  */
-
-$paddingTop = get_field('padding_top');
-$paddingBottom = get_field('padding_bottom');
-$width = get_field('column_width');
-$gap = get_field('gap');
 ?>
 
-<article class="col-span-12 md:col-span-6 lg:<?= $width ?> <?= $gap ?> gap-y-4" style="padding-top: <?= $paddingTop ?>px; padding-bottom: <?= $paddingBottom ?>px;">
-    <InnerBlocks/>
-</article>
+<?php
+$anchor = isset($block['anchor']) ? $block['anchor'] : '';
+$classes = isset($block['className']) ? $block['className'] : '';
+?>
 
+
+<h1 id="<?= $anchor; ?>" class="border-b-[5px] pb-3 text-off-black text-[55px] font-bold <?= $classes; ?>"><?= get_field('title'); ?></h1>
