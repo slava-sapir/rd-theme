@@ -7,7 +7,7 @@ export class Counter {
   constructor(counterElement: Element) {
     this.counterElement = counterElement;
     const targetAttr: string | null =
-      this.counterElement.getAttribute("data-target");
+    this.counterElement.getAttribute("data-target");
     this.target = targetAttr ? parseInt(targetAttr) : 0;
     this.increment = this.target / 100;
     this.counterElement.addEventListener("mouseover", () => {
