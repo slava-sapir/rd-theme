@@ -93,11 +93,10 @@
                 "id": ""
             },
             "choices": {
-                "w-7\/12": "w-7\/12",
-                "w-8\/12": "w-8\/12",
-                "w-9\/12": "w-9\/12",
-                "w-10\/12": "w-10\/12",
-                "w-full": "w-full"
+                "container": "Default",
+                "small-container": "Small",
+                "narrow-container": "Narrow",
+                "medium-container": "Medium"
             },
             "default_value": false,
             "return_format": "value",
@@ -127,5 +126,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727726619
+    "modified": 1728484975
 }
