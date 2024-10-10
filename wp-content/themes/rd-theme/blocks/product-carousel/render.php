@@ -23,7 +23,8 @@ $args = [
 $products = new WP_Query($args);
 ?>
 
-<section id="<?= $anchor; ?>" class="<?= $classes; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
+<section id="<?= $anchor; ?>" class="relative <?= $classes; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
+    <h2 class="font-semibold text-center mb-10 lg:mb-24 relative after:content-[''] after:absolute after:bottom-[-23px] after:left-1/2 after:-translate-x-1/2 after:bg-off-black after:h-[6px] after:w-[48px]"><?= geT_field('title'); ?></h2>
     <div class="swiper-container product-carousel overflow-x-hidden">
         <div class="swiper-wrapper">
             <?php while($products->have_posts()) : $products->the_post(); ?>
