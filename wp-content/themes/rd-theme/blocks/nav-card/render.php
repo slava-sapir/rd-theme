@@ -19,7 +19,7 @@ $link = get_field('link');
 ?>
   <div class="relative w-full pt-[70px] pb-[40px] pl-[60px] pr-[135px] bg-no-repeat bg-center bg-cover h-[600px] flex flex-col justify-between" style="background-image: url('<?php echo $bg_image['url']; ?>');">
     <div class="absolute inset-0 bg-<?= $filter_color ? $filter_color : ''; ?> "></div>
-  <div class="">
+  <div>
     <h3 class="text-white text-4xl font-medium mb-[18px]"><?= $title; ?></h3>
     <p class="text-white text-base"><?= $text; ?></p>
   </div>
