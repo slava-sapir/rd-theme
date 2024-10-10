@@ -4,18 +4,15 @@ import forms from "@tailwindcss/forms";
 import typography from "@tailwindcss/typography";
 import daisyui from "daisyui";
 
-import {smallContainer, narrowContainer} from "./tailwind.components";
+import breakpoints from "./tailwind.breakpoints";
+import {
+  smallContainer,
+  narrowContainer,
+  mediumContainer,
+} from "./tailwind.components";
+import safelist from "./tailwind.safelist";
 
 const base_font_size = 16;
-const breakpoints = {
-    'xs': '0px',
-    'sm': '576px',
-    'md': '720px',
-    'lg': '960px',
-    'xl': '1200px',
-    '2xl': '1400px',
-    '3xl': '1520px'
-}
 
 module.exports = {
   content: [
@@ -77,40 +74,20 @@ module.exports = {
         "custom-gradient-dark":
           "linear-gradient(0deg, rgba(58, 58, 56, 0.90) 0%, rgba(58, 58, 56, 0.90) 100%)",
       },
+      gap: {
+        "50px": "50px",
+        "100px": "100px",
+      },
     },
   },
-  safelist: [
-    "small-container",
-    "narrow-container",
-    "text-4xl",
-    "text-green/50",
-    "gap-x-5",
-    "gap-x-[50px]",
-    "gap-x-[100px]",
-    "col-span-3",
-    "col-span-4",
-    "col-span-6",
-    "col-span-9",
-    "bg-custom-gradient-blue",
-    "bg-custom-gradient-dark",
-  ],
+  safelist: safelist,
   plugins: [
-    // function ({addBase, theme}) {
-    //     addBase({
-    //         h1: {fontSize: theme('fontSize.h1')},
-    //         h2: {fontSize: theme('fontSize.h2')},
-    //         h3: {fontSize: theme('fontSize.h3')},
-    //         h4: {fontSize: theme('fontSize.h4')},
-    //         h5: {fontSize: theme('fontSize.h5')},
-    //         h6: {fontSize: theme('fontSize.h6')},
-    //         p: {fontSize: theme('fontSize.p')},
-    //     });
-    // },
     smallContainer,
     narrowContainer,
+    mediumContainer,
     container_queries,
     forms,
     typography,
     daisyui,
   ],
-};
+}

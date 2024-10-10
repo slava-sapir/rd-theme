@@ -13,13 +13,20 @@
 */
 $bg_image = get_field('bg_image');
 $filter_color = get_field('filter_color'); 
+<<<<<<< HEAD
 echo $filter_color;
+=======
+>>>>>>> develop
 $title = get_field('title'); 
 $text = get_field('text'); 
 $link = get_field('link');
 ?>
   <div class="relative w-full pt-[70px] pb-[40px] pl-[60px] pr-[135px] bg-no-repeat bg-center bg-cover h-[600px] flex flex-col justify-between" style="background-image: url('<?php echo $bg_image['url']; ?>');">
+<<<<<<< HEAD
     <div class="absolute inset-0 bg-<?= $filter_color ? $filter_color : ''; ?>"></div>
+=======
+    <div class="absolute inset-0 bg-<?= $filter_color ? $filter_color : ''; ?> "></div>
+>>>>>>> develop
   <div class="">
     <h3 class="text-white text-4xl font-medium mb-[18px]"><?= $title; ?></h3>
     <p class="text-white text-base"><?= $text; ?></p>

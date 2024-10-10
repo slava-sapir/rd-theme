@@ -4,6 +4,7 @@
 
 @import "../../node_modules/swiper/swiper";
 @import "../../node_modules/swiper/modules/navigation";
+@import "../../node_modules/swiper/modules/pagination";
 @import "../../node_modules/swiper/modules/effect-fade";
 
 @layer components {
@@ -13,3 +14,6 @@
 @layer base {
     @import "base/typography";
 }
+
+@import "../../blocks/accordion/accordion";
+@import "../../blocks/carousel/carousel";
