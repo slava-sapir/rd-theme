@@ -16,15 +16,19 @@ $filter_color = get_field('filter_color');
 $title = get_field('title'); 
 $text = get_field('text'); 
 $link = get_field('link');
+$padding_top = get_field('padding_top');
+$padding_bottom = get_field('padding_bottom');
+$padding_left = get_field('padding_left');
+$padding_right = get_field('padding_right');
 ?>
-  <div class="relative w-full pt-[70px] pb-[40px] pl-[60px] pr-[135px] bg-no-repeat bg-center bg-cover h-[600px] flex flex-col justify-between" style="background-image: url('<?php echo $bg_image['url']; ?>');">
+  <div class="relative w-full bg-no-repeat bg-center bg-cover flex flex-col justify-between" style="background-image: url('<?php echo $bg_image['url']; ?>'); padding-top: <?= $padding_top; ?>px; padding-bottom: <?= $padding_bottom; ?>px; padding-left: <?= $padding_left; ?>px; padding-right: <?= $padding_right; ?>px">
     <div class="absolute inset-0 bg-<?= $filter_color ? $filter_color : ''; ?> "></div>
   <div class="">
     <h3 class="text-white text-4xl font-medium mb-[18px]"><?= $title; ?></h3>
     <p class="text-white text-base"><?= $text; ?></p>
   </div>
   <?php if ($link) : ?>
-    <a class="text-white text-base" href="<?= $link['url']; ?>"><?= $link['title']; ?>&nbsp;&nbsp;&nbsp;></a>
+    <a class="text-white text-base pt-[50px] md:pt-[100px]" href="<?= $link['url']; ?>"><?= $link['title']; ?>&nbsp;&nbsp;&nbsp;></a>
   <?php endif; ?>
 
 </div>
