@@ -15,6 +15,9 @@ import safelist from "./tailwind.safelist";
 const base_font_size = 16;
 
 module.exports = {
+    daisyui: {
+        themes: ["light"], // Disable dark mode by only using the light theme
+    },
     content: [
         "./template-parts/*.php",
         "./blocks/**/*.php",
