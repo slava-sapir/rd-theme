@@ -1,6 +1,6 @@
 <?php
 /**
- * Container Block Template.
+ * Dealer Locator Block Template.
  *
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
